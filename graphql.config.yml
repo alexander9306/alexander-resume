@@ -1,0 +1,8 @@
+schema: 
+  - ./src/__generated__/gatsby-introspection.json
+documents:
+  - ./src/**/*.{ts,tsx}
+extensions:
+  endpoints:
+    default:
+      url: http://localhost:8000/___graphql 
