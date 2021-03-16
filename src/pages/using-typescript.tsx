@@ -1,14 +1,11 @@
 import * as React from "react"
-import  { useEffect } from "react"
+import { useEffect } from "react"
 import { PageProps, Link, graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
-useEffect(()=>
- {
-   
- })
+useEffect(() => {})
 
 const UsingTypescript: React.FC<
   PageProps<GatsbyTypes.GetSiteBuildTimeQuery>
@@ -26,7 +23,7 @@ const UsingTypescript: React.FC<
       run <em>tsc --init</em> to create a <em>.tsconfig</em> file.
     </p>
     <p>
-      You're currently on the page "{path}" which was built on{" "}
+      You're currently on the page &quot; {path} &quot; which was built on{" "}
       {data.site?.buildTime}
     </p>
 

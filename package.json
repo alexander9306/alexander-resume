@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "alexander-damaso-cv",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "A simple portafolio project",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Alexander Damaso <alexander9306@gmail.com>",
   "dependencies": {
     "gatsby": "^3.0.1",
     "gatsby-plugin-gatsby-cloud": "^2.0.0",
@@ -46,6 +46,8 @@
     "build": "gatsby build",
     "develop": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
+    "fix": "npm run format && npm run lint-fix",
+    "lint-fix": "eslint --fix",
     "start": "npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",

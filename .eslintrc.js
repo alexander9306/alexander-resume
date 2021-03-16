@@ -11,11 +11,14 @@ module.exports = {
     ".cache",
     "public",
     "gatsby-*.js",
-    '.eslintrc.js',
-    '*.config.js'
+    ".eslintrc.js",
+    "*.config.js",
   ],
   extends: ["airbnb-typescript", "prettier"],
   parserOptions: {
     project: "./tsconfig.json",
+  },
+  rules: {
+    "react/prop-types": "off",
   },
 }
