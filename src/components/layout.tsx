@@ -20,7 +20,6 @@ import "@fontsource/lato/700.css"
 const Layout: React.FC = ({ children }) => (
   <>
     <Header />
-   
       <main className="page lanidng-page">{children}</main>
       <Footer />
   </>
