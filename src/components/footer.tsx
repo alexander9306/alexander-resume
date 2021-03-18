@@ -1,5 +1,5 @@
 import * as React from "react"
-import {IoLogoFacebook, IoLogoInstagram, IoLogoTwitter} from "react-icons/io5"
+import { IoLogoFacebook, IoLogoInstagram, IoLogoTwitter } from "react-icons/io5"
 import { PageLinks } from "./page-links"
 
 const Footer: React.FC = () => (
@@ -26,13 +26,13 @@ const Footer: React.FC = () => (
       © {new Date().getFullYear()}
       <div className="social-icons">
         <a href="facebook.com">
-            <IoLogoFacebook className="icon ion-social-facebook"/>
+          <IoLogoFacebook className="icon ion-social-facebook" />
         </a>
         <a href="instagram.com">
-            <IoLogoInstagram />
+          <IoLogoInstagram />
         </a>
         <a href="twitter.com">
-            <IoLogoTwitter />
+          <IoLogoTwitter />
         </a>
       </div>
     </div>
