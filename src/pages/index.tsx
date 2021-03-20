@@ -1,6 +1,9 @@
 import * as React from "react"
 import { Link } from "gatsby"
+import {IoStarOutline, IoBulbOutline, IoSettingsOutline} from "react-icons/io5"
 import { StaticImage } from "gatsby-plugin-image"
+import latopPicture from "../images/tech/image6.png"
+import avatarPicture from "../images/avatars/avatar.jpg"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -13,7 +16,7 @@ const IndexPage: React.FC = () => (
       <div className="container">
         <div
           className="avatar"
-          style={{backgroundImage:"url('assets/img/avatars/avatar.jpg')"}}
+          style={{ backgroundImage: `url(${avatarPicture})` }}
         />
         <div className="about-me">
           <p>
@@ -31,28 +34,34 @@ const IndexPage: React.FC = () => (
       <div className="container">
         <div className="row g-0">
           <div className="col-md-6 col-lg-4 item zoom-on-hover">
-            <a href="#kk">
-              <img
-                className="img-fluid image"
-                src="assets/img/nature/image5.jpg"
+            <Link to="project/source">
+              <StaticImage
+                src="../images/nature/image5.jpg"
+                alt="A Gatsby astronaut"
+                imgClassName="img-fluid image"
+                layout="fullWidth"
               />
-            </a>
+            </Link>
           </div>
           <div className="col-md-6 col-lg-4 item zoom-on-hover">
-            <a href="#">
-              <img
-                className="img-fluid image"
-                src="assets/img/nature/image2.jpg"
+            <Link to="/to">
+              <StaticImage
+                src="../images/nature/image2.jpg"
+                alt="A Gatsby astronaut"
+                imgClassName="img-fluid image"
+                layout="fullWidth"
               />
-            </a>
+            </Link>
           </div>
           <div className="col-md-6 col-lg-4 item zoom-on-hover">
-            <a href="#">
-              <img
-                className="img-fluid image"
-                src="assets/img/tech/image4.jpg"
+            <Link to="/kl">
+              <StaticImage
+                src="../images/nature/image4.jpg"
+                alt="A Gatsby astronaut"
+                imgClassName="img-fluid image"
+                layout="fullWidth"
               />
-            </a>
+            </Link>
           </div>
         </div>
       </div>
@@ -76,7 +85,9 @@ const IndexPage: React.FC = () => (
           <div className="col-md-4">
             <div className="card special-skill-item border-0">
               <div className="card-header bg-transparent border-0">
-                <i className="icon ion-ios-star-outline" />
+                <IoStarOutline className="icon" style={{
+                  "strokeWidth": "100px"
+                }} />
               </div>
               <div className="card-body">
                 <h3 className="card-title">Web Design</h3>
@@ -91,7 +102,7 @@ const IndexPage: React.FC = () => (
           <div className="col-md-4">
             <div className="card special-skill-item border-0">
               <div className="card-header bg-transparent border-0">
-                <i className="icon ion-ios-lightbulb-outline" />
+                <IoBulbOutline className="icon"/>
               </div>
               <div className="card-body">
                 <h3 className="card-title">Interface Design</h3>
@@ -106,7 +117,7 @@ const IndexPage: React.FC = () => (
           <div className="col-md-4">
             <div className="card special-skill-item border-0">
               <div className="card-header bg-transparent border-0">
-                <i className="icon ion-ios-gear-outline" />
+                <IoSettingsOutline className="icon"/>
               </div>
               <div className="card-body">
                 <h3 className="card-title">Photography and Print</h3>
@@ -122,35 +133,34 @@ const IndexPage: React.FC = () => (
       </div>
     </section>
     <section className="portfolio-block website gradient">
-        <div className="container">
-            <div className="row align-items-center">
-                <div className="col-md-12 col-lg-5 offset-lg-1 text">
-                    <h3>Website Project</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eget velit ultricies, feugiat est sed, efr nunc, vivamus vel accumsan dui. Quisque ac dolor cursus, volutpat nisl vel, porttitor eros.</p>
-                </div>
-                <div className="col-md-12 col-lg-5">
-                    <div className="portfolio-laptop-mockup">
-                        <div className="screen">
-                            <div className="screen-content" style={{backgroundImage:"url(&quot;assets/img/tech/image6.png&quot;)"}} />
-                        </div>
-                        <div className="keyboard" />
-                    </div>
-                </div>
+      <div className="container">
+        <div className="row align-items-center">
+          <div className="col-md-12 col-lg-5 offset-lg-1 text">
+            <h3>Website Project</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
+              eget velit ultricies, feugiat est sed, efr nunc, vivamus vel
+              accumsan dui. Quisque ac dolor cursus, volutpat nisl vel,
+              porttitor eros.
+            </p>
+          </div>
+          <div className="col-md-12 col-lg-5">
+            <div className="portfolio-laptop-mockup">
+              <div className="screen">
+                <div
+                  className="screen-content"
+                  style={{
+                    backgroundImage:
+                      `url(${latopPicture})`,
+                  }}
+                />
+              </div>
+              <div className="keyboard" />
             </div>
+          </div>
         </div>
+      </div>
     </section>
-    <StaticImage
-      src="../images/gatsby-astronaut.png"
-      width={300}
-      quality={95}
-      formats={["auto"]}
-      alt="A Gatsby astronaut"
-      style={{ marginBottom: `1.45rem` }}
-    />
-    {/* <p>
-      <Link to="/page-2/">Go to page 2</Link> <br />
-      <Link to="/using-typescript/">Go to "Using TypeScript"</Link>
-    </p> */}
   </Layout>
 )
 
