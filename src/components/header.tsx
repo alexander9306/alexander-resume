@@ -1,26 +1,43 @@
 import * as React from "react"
-import { Link } from "gatsby"
+import { Link, useIntl } from "gatsby-plugin-intl"
 import { Navbar, Container } from "react-bootstrap"
 import { HeaderLinks, Links } from "./page-links"
 
 const Header: React.FC = () => {
+  const intl = useIntl()
   const links: Links[] = [
     {
       to: "/",
-      name: "Home",
+      name: intl.formatMessage({
+                  id:"home",
+                  defaultMessage: "Home",
+        description: "Home link on header.",
+      }),
     },
 
     {
-      to: "projects-grid-cards",
-      name: "Projects",
+      to: "/projects-grid-cards",
+      name: intl.formatMessage({
+                  id:"project_header",
+                  defaultMessage: "Projects",
+        description: "Projects link on header.",
+      }),
     },
     {
-      to: "cv",
-      name: "CV",
+      to: "/cv",
+      name: intl.formatMessage({
+                  id:"cv",
+                  defaultMessage: "CV",
+        description: "CV link on header.",
+      }),
     },
     {
-      to: "hire-me",
-      name: "Hire me",
+      to: "/hire-me",
+      name: intl.formatMessage({
+                  id:"hire_me",
+                  defaultMessage: "Hire me",
+        description: "Hire me link on header.",
+      }),
     },
   ]
   return (

@@ -299,8 +299,30 @@ type SitePage = Node & {
 };
 
 type SitePageContext = {
-  readonly slug: Maybe<Scalars['String']>;
-  readonly langKey: Maybe<Scalars['String']>;
+  readonly language: Maybe<Scalars['String']>;
+  readonly intl: Maybe<SitePageContextIntl>;
+};
+
+type SitePageContextIntl = {
+  readonly language: Maybe<Scalars['String']>;
+  readonly languages: Maybe<ReadonlyArray<Maybe<Scalars['String']>>>;
+  readonly messages: Maybe<SitePageContextIntlMessages>;
+  readonly routed: Maybe<Scalars['Boolean']>;
+  readonly originalPath: Maybe<Scalars['String']>;
+  readonly redirect: Maybe<Scalars['Boolean']>;
+  readonly defaultLanguage: Maybe<Scalars['String']>;
+};
+
+type SitePageContextIntlMessages = {
+  readonly about_me: Maybe<Scalars['String']>;
+  readonly contact_me: Maybe<Scalars['String']>;
+  readonly cv: Maybe<Scalars['String']>;
+  readonly hire_me: Maybe<Scalars['String']>;
+  readonly home: Maybe<Scalars['String']>;
+  readonly notfound_message: Maybe<Scalars['String']>;
+  readonly notfound_title: Maybe<Scalars['String']>;
+  readonly project: Maybe<Scalars['String']>;
+  readonly project_header: Maybe<Scalars['String']>;
 };
 
 type ImageFormat =
@@ -586,10 +608,11 @@ type SitePlugin = Node & {
 };
 
 type SitePluginPluginOptions = {
-  readonly langKeyDefault: Maybe<Scalars['String']>;
-  readonly useLangKeyLayout: Maybe<Scalars['Boolean']>;
-  readonly name: Maybe<Scalars['String']>;
   readonly path: Maybe<Scalars['String']>;
+  readonly languages: Maybe<ReadonlyArray<Maybe<Scalars['String']>>>;
+  readonly defaultLanguage: Maybe<Scalars['String']>;
+  readonly redirect: Maybe<Scalars['Boolean']>;
+  readonly name: Maybe<Scalars['String']>;
   readonly base64Width: Maybe<Scalars['Int']>;
   readonly stripMetadata: Maybe<Scalars['Boolean']>;
   readonly defaultQuality: Maybe<Scalars['Int']>;
@@ -1737,8 +1760,30 @@ type SiteSortInput = {
 };
 
 type SitePageContextFilterInput = {
-  readonly slug: Maybe<StringQueryOperatorInput>;
-  readonly langKey: Maybe<StringQueryOperatorInput>;
+  readonly language: Maybe<StringQueryOperatorInput>;
+  readonly intl: Maybe<SitePageContextIntlFilterInput>;
+};
+
+type SitePageContextIntlFilterInput = {
+  readonly language: Maybe<StringQueryOperatorInput>;
+  readonly languages: Maybe<StringQueryOperatorInput>;
+  readonly messages: Maybe<SitePageContextIntlMessagesFilterInput>;
+  readonly routed: Maybe<BooleanQueryOperatorInput>;
+  readonly originalPath: Maybe<StringQueryOperatorInput>;
+  readonly redirect: Maybe<BooleanQueryOperatorInput>;
+  readonly defaultLanguage: Maybe<StringQueryOperatorInput>;
+};
+
+type SitePageContextIntlMessagesFilterInput = {
+  readonly about_me: Maybe<StringQueryOperatorInput>;
+  readonly contact_me: Maybe<StringQueryOperatorInput>;
+  readonly cv: Maybe<StringQueryOperatorInput>;
+  readonly hire_me: Maybe<StringQueryOperatorInput>;
+  readonly home: Maybe<StringQueryOperatorInput>;
+  readonly notfound_message: Maybe<StringQueryOperatorInput>;
+  readonly notfound_title: Maybe<StringQueryOperatorInput>;
+  readonly project: Maybe<StringQueryOperatorInput>;
+  readonly project_header: Maybe<StringQueryOperatorInput>;
 };
 
 type SitePluginFilterInput = {
@@ -1758,10 +1803,11 @@ type SitePluginFilterInput = {
 };
 
 type SitePluginPluginOptionsFilterInput = {
-  readonly langKeyDefault: Maybe<StringQueryOperatorInput>;
-  readonly useLangKeyLayout: Maybe<BooleanQueryOperatorInput>;
-  readonly name: Maybe<StringQueryOperatorInput>;
   readonly path: Maybe<StringQueryOperatorInput>;
+  readonly languages: Maybe<StringQueryOperatorInput>;
+  readonly defaultLanguage: Maybe<StringQueryOperatorInput>;
+  readonly redirect: Maybe<BooleanQueryOperatorInput>;
+  readonly name: Maybe<StringQueryOperatorInput>;
   readonly base64Width: Maybe<IntQueryOperatorInput>;
   readonly stripMetadata: Maybe<BooleanQueryOperatorInput>;
   readonly defaultQuality: Maybe<IntQueryOperatorInput>;
@@ -1953,8 +1999,22 @@ type SitePageFieldsEnum =
   | 'internal.owner'
   | 'internal.type'
   | 'isCreatedByStatefulCreatePages'
-  | 'context.slug'
-  | 'context.langKey'
+  | 'context.language'
+  | 'context.intl.language'
+  | 'context.intl.languages'
+  | 'context.intl.messages.about_me'
+  | 'context.intl.messages.contact_me'
+  | 'context.intl.messages.cv'
+  | 'context.intl.messages.hire_me'
+  | 'context.intl.messages.home'
+  | 'context.intl.messages.notfound_message'
+  | 'context.intl.messages.notfound_title'
+  | 'context.intl.messages.project'
+  | 'context.intl.messages.project_header'
+  | 'context.intl.routed'
+  | 'context.intl.originalPath'
+  | 'context.intl.redirect'
+  | 'context.intl.defaultLanguage'
   | 'pluginCreator.id'
   | 'pluginCreator.parent.id'
   | 'pluginCreator.parent.parent.id'
@@ -1996,10 +2056,11 @@ type SitePageFieldsEnum =
   | 'pluginCreator.resolve'
   | 'pluginCreator.name'
   | 'pluginCreator.version'
-  | 'pluginCreator.pluginOptions.langKeyDefault'
-  | 'pluginCreator.pluginOptions.useLangKeyLayout'
-  | 'pluginCreator.pluginOptions.name'
   | 'pluginCreator.pluginOptions.path'
+  | 'pluginCreator.pluginOptions.languages'
+  | 'pluginCreator.pluginOptions.defaultLanguage'
+  | 'pluginCreator.pluginOptions.redirect'
+  | 'pluginCreator.pluginOptions.name'
   | 'pluginCreator.pluginOptions.base64Width'
   | 'pluginCreator.pluginOptions.stripMetadata'
   | 'pluginCreator.pluginOptions.defaultQuality'
@@ -2491,10 +2552,11 @@ type SitePluginFieldsEnum =
   | 'resolve'
   | 'name'
   | 'version'
-  | 'pluginOptions.langKeyDefault'
-  | 'pluginOptions.useLangKeyLayout'
-  | 'pluginOptions.name'
   | 'pluginOptions.path'
+  | 'pluginOptions.languages'
+  | 'pluginOptions.defaultLanguage'
+  | 'pluginOptions.redirect'
+  | 'pluginOptions.name'
   | 'pluginOptions.base64Width'
   | 'pluginOptions.stripMetadata'
   | 'pluginOptions.defaultQuality'
@@ -2556,6 +2618,11 @@ type MetaDataQueryVariables = Exact<{ [key: string]: never; }>;
 
 type MetaDataQuery = { readonly site: Maybe<{ readonly siteMetadata: Maybe<Pick<SiteSiteMetadata, 'title' | 'description' | 'author'>> }> };
 
+type PagesQueryQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+type PagesQueryQuery = { readonly allSitePage: { readonly nodes: ReadonlyArray<Pick<SitePage, 'path'>> } };
+
 type GatsbyImageSharpFixedFragment = Pick<ImageSharpFixed, 'base64' | 'width' | 'height' | 'src' | 'srcSet'>;
 
 type GatsbyImageSharpFixed_tracedSVGFragment = Pick<ImageSharpFixed, 'tracedSVG' | 'width' | 'height' | 'src' | 'srcSet'>;
@@ -2581,10 +2648,5 @@ type GatsbyImageSharpFluid_withWebp_tracedSVGFragment = Pick<ImageSharpFluid, 't
 type GatsbyImageSharpFluid_noBase64Fragment = Pick<ImageSharpFluid, 'aspectRatio' | 'src' | 'srcSet' | 'sizes'>;
 
 type GatsbyImageSharpFluid_withWebp_noBase64Fragment = Pick<ImageSharpFluid, 'aspectRatio' | 'src' | 'srcSet' | 'srcWebp' | 'srcSetWebp' | 'sizes'>;
-
-type PagesQueryQueryVariables = Exact<{ [key: string]: never; }>;
-
-
-type PagesQueryQuery = { readonly allSitePage: { readonly nodes: ReadonlyArray<Pick<SitePage, 'path'>> } };
 
 }

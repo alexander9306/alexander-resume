@@ -5,17 +5,20 @@ import Header from "./header"
 
 // Styles
 import "./style.scss"
+import "./layout.scss"
 // import "bootstrap/dist/css/bootstrap.min.css"
 import "@fontsource/lato/300.css"
 import "@fontsource/lato/400.css"
 import "@fontsource/lato/700.css"
 
 const Layout: React.FC = ({ children }) => (
-  <>
-    <Header />
-    <main className="page lanidng-page">{children}</main>
-    <Footer />
-  </>
+  <div id="page-container">
+    <div id="content-wrap" >
+      <Header />
+      <main className="page lanidng-page">{children}</main>
+    </div>
+    <Footer id="footer" />
+  </div>
 )
 
 Layout.propTypes = {

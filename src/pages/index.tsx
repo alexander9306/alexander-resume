@@ -1,6 +1,11 @@
 import * as React from "react"
-import { Link } from "gatsby"
-import {IoStarOutline, IoBulbOutline, IoSettingsOutline} from "react-icons/io5"
+import { useIntl , Link } from "gatsby-plugin-intl"
+
+import {
+  IoStarOutline,
+  IoBulbOutline,
+  IoSettingsOutline,
+} from "react-icons/io5"
 import { StaticImage } from "gatsby-plugin-image"
 import latopPicture from "../images/tech/image6.png"
 import avatarPicture from "../images/avatars/avatar.jpg"
@@ -8,9 +13,12 @@ import avatarPicture from "../images/avatars/avatar.jpg"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
-const IndexPage: React.FC = () => (
+const IndexPage: React.FC = () => {
+  const intl = useIntl()
+
+  return (
   <Layout>
-    <SEO title="Home" />
+    <SEO title="Home" lang={intl.locale} />
 
     <section className="portfolio-block block-intro">
       <div className="container">
@@ -85,9 +93,12 @@ const IndexPage: React.FC = () => (
           <div className="col-md-4">
             <div className="card special-skill-item border-0">
               <div className="card-header bg-transparent border-0">
-                <IoStarOutline className="icon" style={{
-                  "strokeWidth": "100px"
-                }} />
+                <IoStarOutline
+                  className="icon"
+                  style={{
+                    strokeWidth: "100px",
+                  }}
+                />
               </div>
               <div className="card-body">
                 <h3 className="card-title">Web Design</h3>
@@ -102,7 +113,7 @@ const IndexPage: React.FC = () => (
           <div className="col-md-4">
             <div className="card special-skill-item border-0">
               <div className="card-header bg-transparent border-0">
-                <IoBulbOutline className="icon"/>
+                <IoBulbOutline className="icon" />
               </div>
               <div className="card-body">
                 <h3 className="card-title">Interface Design</h3>
@@ -117,7 +128,7 @@ const IndexPage: React.FC = () => (
           <div className="col-md-4">
             <div className="card special-skill-item border-0">
               <div className="card-header bg-transparent border-0">
-                <IoSettingsOutline className="icon"/>
+                <IoSettingsOutline className="icon" />
               </div>
               <div className="card-body">
                 <h3 className="card-title">Photography and Print</h3>
@@ -132,7 +143,7 @@ const IndexPage: React.FC = () => (
         </div>
       </div>
     </section>
-    <section className="portfolio-block website gradient">
+    <section className="portfolio-block website gradient pb-3">
       <div className="container">
         <div className="row align-items-center">
           <div className="col-md-12 col-lg-5 offset-lg-1 text">
@@ -150,8 +161,7 @@ const IndexPage: React.FC = () => (
                 <div
                   className="screen-content"
                   style={{
-                    backgroundImage:
-                      `url(${latopPicture})`,
+                    backgroundImage: `url(${latopPicture})`,
                   }}
                 />
               </div>
@@ -163,5 +173,6 @@ const IndexPage: React.FC = () => (
     </section>
   </Layout>
 )
+                }
 
 export default IndexPage

@@ -6,6 +6,7 @@ module.exports = {
     browser: true,
     node: true,
   },
+  plugins: ["formatjs"],
   ignorePatterns: [
     "node_modules",
     ".cache",
@@ -20,5 +21,6 @@ module.exports = {
   },
   rules: {
     "react/prop-types": "off",
+    "formatjs/no-offset": "error",
   },
 }

@@ -6,11 +6,17 @@ module.exports = {
   },
   plugins: [
     {
-      resolve: 'gatsby-plugin-i18n',
-      options: {        
-        langKeyDefault: 'en',
-        useLangKeyLayout: false
-      }
+      resolve: `gatsby-plugin-intl`,
+      options: {
+        // language JSON resource path
+        path: `${__dirname}/src/intl`,
+        // supported language
+        languages: [`en`, `es`],
+        // language file path
+        defaultLanguage: `en`,
+        // option to redit to `/en` when connecting `/`
+        redirect: false,
+      },
     },
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sass`,
