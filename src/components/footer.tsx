@@ -1,5 +1,5 @@
 import * as React from "react"
-import { IoLogoFacebook, IoLogoInstagram, IoLogoTwitter } from "react-icons/io5"
+import { IoLogoTwitter, IoLogoGithub, IoLogoLinkedin } from "react-icons/io5"
 import { useIntl } from "gatsby-plugin-intl"
 import { PageLinks } from "./page-links"
 
@@ -14,7 +14,7 @@ const Footer: React.FC<{ id?: string }> = ({ id }) => {
               {
                 to: "/about-me",
                 name: intl.formatMessage({
-                  id:"about_me",
+                  id: "footer-links.about_me",
                   defaultMessage: "About me",
                   description: "About me link on footer.",
                 }),
@@ -22,7 +22,7 @@ const Footer: React.FC<{ id?: string }> = ({ id }) => {
               {
                 to: "/contact-me",
                 name: intl.formatMessage({
-                  id:"contact_me",
+                  id: "footer-links.contact_me",
                   defaultMessage: "Contact me",
                   description: "Contact me link on footer.",
                 }),
@@ -30,7 +30,7 @@ const Footer: React.FC<{ id?: string }> = ({ id }) => {
               {
                 to: "/projects",
                 name: intl.formatMessage({
-                  id:"project",
+                  id: "footer-links.project",
                   defaultMessage: "Projects",
                   description: "Projects link on footer.",
                 }),
@@ -41,12 +41,12 @@ const Footer: React.FC<{ id?: string }> = ({ id }) => {
         © {new Date().getFullYear()}
         <div className="social-icons">
           <a href="facebook.com">
-            <IoLogoFacebook className="icon ion-social-facebook" />
+            <IoLogoLinkedin />
           </a>
           <a href="instagram.com">
-            <IoLogoInstagram />
+            <IoLogoGithub />
           </a>
-          <a href="twitter.com">
+          <a href="/">
             <IoLogoTwitter />
           </a>
         </div>

@@ -10,7 +10,7 @@ const NotFoundPage: React.FC = () => {
   const notFound = intl.formatMessage({
     defaultMessage: "404: Not found",
     description: "SEO: Not found.",
-    id:"notfound.title"
+    id: "notfound.title",
   })
   return (
     <Layout>
@@ -23,7 +23,7 @@ const NotFoundPage: React.FC = () => {
           <h1>{notFound}</h1>
           <p>
             <FormattedMessage
-              defaultMessage="You just hit a route that doesn&#39;t exist..."
+              defaultMessage="You just hit a route that doesn't exist... :("
               description="Not found information message"
               id="notfound.message"
             />

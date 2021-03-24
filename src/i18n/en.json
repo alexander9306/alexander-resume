@@ -1,0 +1,12 @@
+{
+  "footer-links.about_me": "About me",
+  "footer-links.contact_me": "Contact me",
+  "footer-links.project": "Projects",
+  "header-links.cv": "CV",
+  "header-links.hire_me": "Hire me",
+  "header-links.home": "Home",
+  "header-links.project_header": "Projects",
+  "home.title": "Home",
+  "notfound.message": "You just hit a route that doesn't exist... :(",
+  "notfound.title": "404: Not found"
+}

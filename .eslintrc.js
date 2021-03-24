@@ -22,5 +22,20 @@ module.exports = {
   rules: {
     "react/prop-types": "off",
     "formatjs/no-offset": "error",
+    "formatjs/enforce-id": "error",
+    "formatjs/enforce-default-message": ["error", "literal"],
+    "formatjs/enforce-placeholders": "error",
+    "formatjs/no-emoji": "error",
+    "formatjs/enforce-plural-rules": [
+      "error",
+      {
+        one: true,
+        other: true,
+        zero: false,
+      },
+    ],
+    "formatjs/no-camel-case": "error",
+    "formatjs/no-multiple-plurals": "error",
+    "formatjs/no-multiple-whitespaces": "error",
   },
 }

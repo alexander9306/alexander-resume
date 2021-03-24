@@ -9,8 +9,8 @@ const Header: React.FC = () => {
     {
       to: "/",
       name: intl.formatMessage({
-                  id:"home",
-                  defaultMessage: "Home",
+        id: "header-links.home",
+        defaultMessage: "Home",
         description: "Home link on header.",
       }),
     },
@@ -18,24 +18,24 @@ const Header: React.FC = () => {
     {
       to: "/projects-grid-cards",
       name: intl.formatMessage({
-                  id:"project_header",
-                  defaultMessage: "Projects",
+        id: "header-links.project_header",
+        defaultMessage: "Projects",
         description: "Projects link on header.",
       }),
     },
     {
       to: "/cv",
       name: intl.formatMessage({
-                  id:"cv",
-                  defaultMessage: "CV",
+        id: "header-links.cv",
+        defaultMessage: "CV",
         description: "CV link on header.",
       }),
     },
     {
       to: "/hire-me",
       name: intl.formatMessage({
-                  id:"hire_me",
-                  defaultMessage: "Hire me",
+        id: "header-links.hire_me",
+        defaultMessage: "Hire me",
         description: "Hire me link on header.",
       }),
     },

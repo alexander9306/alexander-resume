@@ -10,14 +10,21 @@
 
   // Set *default* container specific settings.json values on container create.
   "settings": {
-    "terminal.integrated.shell.linux": "/bin/bash"
+    "terminal.integrated.shell.linux": "/bin/bash",
+    "typescript.suggest.paths": false
     // "eslint.options": {
     //   "configFile": "./node_modules/gatsby/dist/utils/eslint-config.js"
     // }
   },
 
   // Add the IDs of extensions you want installed when the container is created.
-  "extensions": ["dbaeumer.vscode-eslint", "graphql.vscode-graphql"],
+  "extensions": [
+    "dbaeumer.vscode-eslint",
+    "esbenp.prettier-vscode",
+    "graphql.vscode-graphql",
+    "wix.vscode-import-cost",
+    "christian-kohler.path-intellisense"
+  ],
 
   // Use 'forwardPorts' to make a list of ports inside the container available locally.
   // "forwardPorts": [],

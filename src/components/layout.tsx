@@ -13,7 +13,7 @@ import "@fontsource/lato/700.css"
 
 const Layout: React.FC = ({ children }) => (
   <div id="page-container">
-    <div id="content-wrap" >
+    <div id="content-wrap">
       <Header />
       <main className="page lanidng-page">{children}</main>
     </div>
