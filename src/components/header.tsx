@@ -1,5 +1,5 @@
 import * as React from "react"
-import { Link, useIntl } from "gatsby-plugin-intl"
+import { Link, useIntl } from "gatsby-plugin-react-intl"
 import { Navbar, Container } from "react-bootstrap"
 import { HeaderLinks, Links } from "./page-links"
 

@@ -1,6 +1,6 @@
 import * as React from "react"
 
-import { useIntl, FormattedMessage } from "gatsby-plugin-intl"
+import { useIntl, FormattedMessage } from "gatsby-plugin-react-intl"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 

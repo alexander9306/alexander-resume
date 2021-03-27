@@ -1,10 +1,22 @@
 import * as React from "react"
-import { IoLogoTwitter, IoLogoGithub, IoLogoLinkedin } from "react-icons/io5"
-import { useIntl } from "gatsby-plugin-intl"
+import { IoLogoGithub, IoLogoLinkedin, IoMail } from "react-icons/io5"
+import { useIntl } from "gatsby-plugin-react-intl"
+import { graphql, useStaticQuery } from "gatsby"
 import { PageLinks } from "./page-links"
 
 const Footer: React.FC<{ id?: string }> = ({ id }) => {
   const intl = useIntl()
+  const { site } = useStaticQuery<GatsbyTypes.FooterLinksQuery>(graphql`
+    query FooterLinks {
+      site {
+        links: siteMetadata {
+          linkedIn
+          github
+          email
+        }
+      }
+    }
+  `)
   return (
     <footer id={id} className="page-footer">
       <div className="container">
@@ -39,15 +51,25 @@ const Footer: React.FC<{ id?: string }> = ({ id }) => {
           />
         </div>
         © {new Date().getFullYear()}
-        <div className="social-icons">
-          <a href="facebook.com">
+        <div className="social-icons pb-2">
+          <a href={site?.links?.linkedIn}>
             <IoLogoLinkedin />
           </a>
-          <a href="instagram.com">
+          <a href={site?.links?.github}>
             <IoLogoGithub />
           </a>
-          <a href="/">
-            <IoLogoTwitter />
+          <a
+            href={`mailto:${
+              site?.links?.email ?? "noemail@noreply.com"
+            }?subject=${intl.formatMessage({
+              defaultMessage: "Job offer",
+              description: "Email subject",
+            })}&body=${intl.formatMessage({
+              defaultMessage: "Sent from your website.",
+              description: "Email body",
+            })}`}
+          >
+            <IoMail />
           </a>
         </div>
       </div>

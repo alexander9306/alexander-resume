@@ -3,19 +3,24 @@ module.exports = {
     title: `Alexander Damaso Résumé`,
     description: `My résumé and more info about me`,
     author: `Alexander Damaso`,
+    linkedIn: "https://www.linkedin.com/in/alexander9306/",
+    github: "https://github.com/alexander9306",
+    email: "alexander9306@gmail.com",
   },
   plugins: [
     {
-      resolve: `gatsby-plugin-intl`,
+      resolve: `gatsby-plugin-react-intl`,
       options: {
         // language JSON resource path
-        path: `${__dirname}/src/i18n`,
+        path: `${__dirname}/src/intl`,
         // supported language
         languages: [`en`, `es`],
         // language file path
         defaultLanguage: `en`,
         // option to redit to `/en` when connecting `/`
         redirect: false,
+        // option for use / as defaultLangauge root path. if your defaultLanguage is `ko`, when `redirectDefaultLanguageToRoot` is true, then it will not generate `/ko/xxx` pages, instead of `/xxx`
+        redirectDefaultLanguageToRoot: false,
       },
     },
     `gatsby-plugin-react-helmet`,

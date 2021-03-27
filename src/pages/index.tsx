@@ -1,6 +1,5 @@
 import * as React from "react"
-import { useIntl, Link } from "gatsby-plugin-intl"
-
+import { useIntl, Link, FormattedMessage } from "gatsby-plugin-react-intl"
 import {
   IoStarOutline,
   IoBulbOutline,
@@ -8,7 +7,6 @@ import {
 } from "react-icons/io5"
 import { StaticImage } from "gatsby-plugin-image"
 import latopPicture from "../images/tech/image6.png"
-import avatarPicture from "../images/avatars/avatar.jpg"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -28,15 +26,33 @@ const IndexPage: React.FC = () => {
 
       <section className="portfolio-block block-intro">
         <div className="container">
-          <div
-            className="avatar"
-            style={{ backgroundImage: `url(${avatarPicture})` }}
+          <StaticImage
+            style={{
+              backgroundSize: "cover",
+              backgroundRepeat: "no-repeat",
+              margin: "auto",
+              borderRadius: 100,
+              marginBottom: 30,
+            }}
+            src="../images/avatars/PXL_20210324_011943234_2.jpg"
+            alt={intl.formatMessage({
+              defaultMessage: "Me",
+              id: "home.avatar.alt",
+            })}
+            placeholder="blurred"
+            width={150}
+            height={150}
+            quality={95}
           />
           <div className="about-me">
             <p>
-              Hello! I am <strong>John Smith</strong>. I work as interface and
-              front end developer. I have passion for pixel perfect, minimal and
-              easy to use interfaces.
+              <FormattedMessage
+                id="home.first_message"
+                defaultMessage="Hello! I am {my_name}. I work as interface and front end developer. I have passion for pixel perfect, minimal and easy to use interfaces."
+                values={{
+                  my_name: <strong>Alexander Damaso</strong>,
+                }}
+              />
             </p>
             <a className="btn btn-outline-primary" role="button" href="#kh">
               Hire me
