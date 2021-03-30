@@ -1,5 +1,5 @@
 import * as React from "react"
-import { useIntl, Link, FormattedMessage } from "gatsby-plugin-react-intl"
+import { useIntl, Link, FormattedMessage } from "gatsby-plugin-intl"
 import {
   IoStarOutline,
   IoBulbOutline,
@@ -19,7 +19,8 @@ const IndexPage: React.FC = () => {
       <SEO
         title={intl.formatMessage({
           defaultMessage: "Home",
-          id: "home.title",
+          description: "SEO: Home title",
+          id: "2MDa4g",
         })}
         lang={intl.locale}
       />
@@ -37,7 +38,8 @@ const IndexPage: React.FC = () => {
             src="../images/avatars/PXL_20210324_011943234_2.jpg"
             alt={intl.formatMessage({
               defaultMessage: "Me",
-              id: "home.avatar.alt",
+              description: "Avatar alt information",
+              id: "KtGdeo",
             })}
             placeholder="blurred"
             width={150}
@@ -47,8 +49,9 @@ const IndexPage: React.FC = () => {
           <div className="about-me">
             <p>
               <FormattedMessage
-                id="home.first_message"
                 defaultMessage="Hello! I am {my_name}. I work as interface and front end developer. I have passion for pixel perfect, minimal and easy to use interfaces."
+                id="60q+eZ"
+                description="Home Message about myself"
                 values={{
                   my_name: <strong>Alexander Damaso</strong>,
                 }}

@@ -1,5 +1,5 @@
 import * as React from "react"
-import { Link, useIntl } from "gatsby-plugin-react-intl"
+import { Link, useIntl } from "gatsby-plugin-intl"
 import { Navbar, Container } from "react-bootstrap"
 import { HeaderLinks, Links } from "./page-links"
 
@@ -9,7 +9,7 @@ const Header: React.FC = () => {
     {
       to: "/",
       name: intl.formatMessage({
-        id: "header-links.home",
+        id: "1E51p8",
         defaultMessage: "Home",
         description: "Home link on header.",
       }),
@@ -18,7 +18,7 @@ const Header: React.FC = () => {
     {
       to: "/projects-grid-cards",
       name: intl.formatMessage({
-        id: "header-links.project_header",
+        id: "gM/ef/",
         defaultMessage: "Projects",
         description: "Projects link on header.",
       }),
@@ -26,7 +26,7 @@ const Header: React.FC = () => {
     {
       to: "/cv",
       name: intl.formatMessage({
-        id: "header-links.cv",
+        id: "Wbtjsk",
         defaultMessage: "CV",
         description: "CV link on header.",
       }),
@@ -34,7 +34,7 @@ const Header: React.FC = () => {
     {
       to: "/hire-me",
       name: intl.formatMessage({
-        id: "header-links.hire_me",
+        id: "jHGxHB",
         defaultMessage: "Hire me",
         description: "Hire me link on header.",
       }),

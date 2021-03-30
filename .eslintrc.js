@@ -12,6 +12,7 @@ module.exports = {
     ".cache",
     "public",
     "gatsby-*.js",
+    "message-formatter.js",
     ".eslintrc.js",
     "*.config.js",
   ],
@@ -22,8 +23,8 @@ module.exports = {
   rules: {
     "react/prop-types": "off",
     "formatjs/no-offset": "error",
-    "formatjs/enforce-id": "error",
     "formatjs/enforce-default-message": ["error", "literal"],
+    "formatjs/enforce-description": ["error", "literal"],
     "formatjs/enforce-placeholders": "error",
     "formatjs/no-emoji": "error",
     "formatjs/enforce-plural-rules": [
@@ -37,5 +38,11 @@ module.exports = {
     "formatjs/no-camel-case": "error",
     "formatjs/no-multiple-plurals": "error",
     "formatjs/no-multiple-whitespaces": "error",
+    "formatjs/enforce-id": [
+      "error",
+      {
+        idInterpolationPattern: "[sha512:contenthash:base64:6]",
+      },
+    ],
   },
 }

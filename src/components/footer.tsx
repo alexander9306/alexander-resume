@@ -1,6 +1,6 @@
 import * as React from "react"
 import { IoLogoGithub, IoLogoLinkedin, IoMail } from "react-icons/io5"
-import { useIntl } from "gatsby-plugin-react-intl"
+import { useIntl } from "gatsby-plugin-intl"
 import { graphql, useStaticQuery } from "gatsby"
 import { PageLinks } from "./page-links"
 
@@ -26,24 +26,24 @@ const Footer: React.FC<{ id?: string }> = ({ id }) => {
               {
                 to: "/about-me",
                 name: intl.formatMessage({
-                  id: "footer-links.about_me",
                   defaultMessage: "About me",
+                  id: "cyQPkf",
                   description: "About me link on footer.",
                 }),
               },
               {
                 to: "/contact-me",
                 name: intl.formatMessage({
-                  id: "footer-links.contact_me",
                   defaultMessage: "Contact me",
+                  id: "DLZ+8c",
                   description: "Contact me link on footer.",
                 }),
               },
               {
                 to: "/projects",
                 name: intl.formatMessage({
-                  id: "footer-links.project",
                   defaultMessage: "Projects",
+                  id: "1ZMKhf",
                   description: "Projects link on footer.",
                 }),
               },
@@ -63,9 +63,11 @@ const Footer: React.FC<{ id?: string }> = ({ id }) => {
               site?.links?.email ?? "noemail@noreply.com"
             }?subject=${intl.formatMessage({
               defaultMessage: "Job offer",
+              id: "v/T4gy",
               description: "Email subject",
             })}&body=${intl.formatMessage({
               defaultMessage: "Sent from your website.",
+              id: "Qft8Dg",
               description: "Email body",
             })}`}
           >

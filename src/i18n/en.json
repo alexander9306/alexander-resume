@@ -1,16 +1,58 @@
 {
-  "footer-links.about_me": "About me",
-  "footer-links.contact_me": "Contact me",
-  "footer-links.project": "Projects",
-  "footer.email.body": "Sent from your website.",
-  "footer.email.subject": "Job offer",
-  "header-links.cv": "CV",
-  "header-links.hire_me": "Hire me",
-  "header-links.home": "Home",
-  "header-links.project_header": "Projects",
-  "home.avatar.alt": "Me",
-  "home.first_message": "Hello! I am {my_name}. I work as interface and front end developer. I have passion for pixel perfect, minimal and easy to use interfaces.",
-  "home.title": "Home",
-  "notfound.message": "You just hit a route that doesn't exist... :(",
-  "notfound.title": "404: Not found"
+  "1E51p8": {
+    "defaultMessage": "Home",
+    "description": "Home link on header."
+  },
+  "1ZMKhf": {
+    "defaultMessage": "Projects",
+    "description": "Projects link on footer."
+  },
+  "2MDa4g": {
+    "defaultMessage": "Home",
+    "description": "SEO: Home title"
+  },
+  "60q+eZ": {
+    "defaultMessage": "Hello! I am {my_name}. I work as interface and front end developer. I have passion for pixel perfect, minimal and easy to use interfaces.",
+    "description": "Home Message about myself"
+  },
+  "DLZ+8c": {
+    "defaultMessage": "Contact me",
+    "description": "Contact me link on footer."
+  },
+  "KtGdeo": {
+    "defaultMessage": "Me",
+    "description": "Avatar alt information"
+  },
+  "LInAss": {
+    "defaultMessage": "You just hit a route that doesn't exist... :(",
+    "description": "Not found information message"
+  },
+  "Qft8Dg": {
+    "defaultMessage": "Sent from your website.",
+    "description": "Email body"
+  },
+  "U8XBaR": {
+    "defaultMessage": "404: Not found",
+    "description": "SEO: Not found."
+  },
+  "Wbtjsk": {
+    "defaultMessage": "CV",
+    "description": "CV link on header."
+  },
+  "cyQPkf": {
+    "defaultMessage": "About me",
+    "description": "About me link on footer."
+  },
+  "gM/ef/": {
+    "defaultMessage": "Projects",
+    "description": "Projects link on header."
+  },
+  "jHGxHB": {
+    "defaultMessage": "Hire me",
+    "description": "Hire me link on header."
+  },
+  "v/T4gy": {
+    "defaultMessage": "Job offer",
+    "description": "Email subject"
+  }
 }

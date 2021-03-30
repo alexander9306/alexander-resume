@@ -1,6 +1,6 @@
 import * as React from "react"
 
-import { useIntl, FormattedMessage } from "gatsby-plugin-react-intl"
+import { useIntl, FormattedMessage } from "gatsby-plugin-intl"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
@@ -10,7 +10,7 @@ const NotFoundPage: React.FC = () => {
   const notFound = intl.formatMessage({
     defaultMessage: "404: Not found",
     description: "SEO: Not found.",
-    id: "notfound.title",
+    id: "U8XBaR",
   })
   return (
     <Layout>
@@ -25,7 +25,7 @@ const NotFoundPage: React.FC = () => {
             <FormattedMessage
               defaultMessage="You just hit a route that doesn't exist... :("
               description="Not found information message"
-              id="notfound.message"
+              id="LInAss"
             />
           </p>
         </div>

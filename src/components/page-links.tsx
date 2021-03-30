@@ -1,5 +1,5 @@
 import * as React from "react"
-import { Link } from "gatsby-plugin-react-intl"
+import { Link } from "gatsby-plugin-intl"
 
 interface LinksProps {
   links: Links[]

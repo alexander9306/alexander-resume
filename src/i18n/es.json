@@ -1,12 +1,58 @@
 {
-  "footer-links.about_me": "Acerca de mi",
-  "footer-links.contact_me": "Contactame",
-  "footer-links.project": "Proyectos",
-  "header-links.cv": "CV",
-  "header-links.hire_me": "Contratame",
-  "header-links.home": "Inicio",
-  "header-links.project_header": "Proyectos",
-  "home.title": "Inicio",
-  "notfound.message": "Alcanzaste una ruta que no existe... :(",
-  "notfound.title": "404: No encotrado"
+  "1E51p8": {
+    "defaultMessage": "Inicio",
+    "description": "Home link on header."
+  },
+  "1ZMKhf": {
+    "defaultMessage": "Proyectos",
+    "description": "Projects link on footer."
+  },
+  "2MDa4g": {
+    "defaultMessage": "Inicio",
+    "description": "SEO: Home title"
+  },
+  "60q+eZ": {
+    "defaultMessage": "Hola! Soy {my_name}. Trabajo como un desarrollador full stack. Tengo una pasion por las cosas minimalistas",
+    "description": "Home Message about myself"
+  },
+  "DLZ+8c": {
+    "defaultMessage": "Contáctame",
+    "description": "Contact me link on footer."
+  },
+  "KtGdeo": {
+    "defaultMessage": "Yo",
+    "description": "Avatar alt information"
+  },
+  "LInAss": {
+    "defaultMessage": "Alcanzaste una ruta que no existe... :(",
+    "description": "Not found information message"
+  },
+  "Qft8Dg": {
+    "defaultMessage": "Enviado desde alexander.com",
+    "description": "Email body"
+  },
+  "U8XBaR": {
+    "defaultMessage": "404: No encontrado",
+    "description": "SEO: Not found."
+  },
+  "Wbtjsk": {
+    "defaultMessage": "CV",
+    "description": "CV link on header."
+  },
+  "cyQPkf": {
+    "defaultMessage": "Acerca de mi",
+    "description": "About me link on footer."
+  },
+  "gM/ef/": {
+    "defaultMessage": "Proyectos",
+    "description": "Projects link on header."
+  },
+  "jHGxHB": {
+    "defaultMessage": "Contrátame",
+    "description": "Hire me link on header."
+  },
+  "v/T4gy": {
+    "defaultMessage": "Oferta de trabajo",
+    "description": "Email subject"
+  }
 }
