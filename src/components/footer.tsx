@@ -1,6 +1,6 @@
 import * as React from "react"
 import { IoLogoGithub, IoLogoLinkedin, IoMail } from "react-icons/io5"
-import { useIntl } from "gatsby-plugin-intl"
+import { useIntl } from "gatsby-plugin-react-intl"
 import { graphql, useStaticQuery } from "gatsby"
 import { PageLinks } from "./page-links"
 

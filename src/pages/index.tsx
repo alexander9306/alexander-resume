@@ -1,5 +1,5 @@
 import * as React from "react"
-import { useIntl, Link, FormattedMessage } from "gatsby-plugin-intl"
+import { useIntl, Link, FormattedMessage } from "gatsby-plugin-react-intl"
 import {
   IoStarOutline,
   IoBulbOutline,
@@ -13,6 +13,10 @@ import SEO from "../components/seo"
 
 const IndexPage: React.FC = () => {
   const intl = useIntl()
+  const hireMeBtnText = intl.formatMessage({
+    defaultMessage: "Hire me",
+    description: "Home: Hire me button",
+  })
 
   return (
     <Layout>
@@ -20,7 +24,6 @@ const IndexPage: React.FC = () => {
         title={intl.formatMessage({
           defaultMessage: "Home",
           description: "SEO: Home title",
-          id: "2MDa4g",
         })}
         lang={intl.locale}
       />
@@ -39,7 +42,6 @@ const IndexPage: React.FC = () => {
             alt={intl.formatMessage({
               defaultMessage: "Me",
               description: "Avatar alt information",
-              id: "KtGdeo",
             })}
             placeholder="blurred"
             width={150}
@@ -49,17 +51,20 @@ const IndexPage: React.FC = () => {
           <div className="about-me">
             <p>
               <FormattedMessage
-                defaultMessage="Hello! I am {my_name}. I work as interface and front end developer. I have passion for pixel perfect, minimal and easy to use interfaces."
-                id="60q+eZ"
+                defaultMessage="Hello! I am {my_name}. I work as a front and back end developer. I create performance-oriented applications with a responsive design."
                 description="Home Message about myself"
                 values={{
                   my_name: <strong>Alexander Damaso</strong>,
                 }}
               />
             </p>
-            <a className="btn btn-outline-primary" role="button" href="#kh">
-              Hire me
-            </a>
+            <Link
+              className="btn btn-outline-primary"
+              role="button"
+              to="/hire-me"
+            >
+              {hireMeBtnText}
+            </Link>
           </div>
         </div>
       </section>
@@ -103,9 +108,9 @@ const IndexPage: React.FC = () => {
         <div className="container">
           <div className="d-flex justify-content-center align-items-center content">
             <h3>Like what you see?</h3>
-            <button className="btn btn-outline-primary btn-lg" type="button">
-              Hire me
-            </button>
+            <Link className="btn btn-outline-primary btn-lg" to="/hire-me">
+              {hireMeBtnText}
+            </Link>
           </div>
         </div>
       </section>
@@ -128,9 +133,10 @@ const IndexPage: React.FC = () => {
                 <div className="card-body">
                   <h3 className="card-title">Web Design</h3>
                   <p className="card-text">
-                    Nullam id dolor id nibh ultricies vehicula ut id elit. Cras
-                    justo odio, dapibus ac facilisis in, egestas eget quam.
-                    Donec id elit non mi porta gravida at eget metus.
+                    <FormattedMessage
+                      defaultMessage="Design websites that can be easily accessed from either PC or mobile is my passion. Let's face it "
+                      description="Home: Web Desing: message"
+                    />
                   </p>
                 </div>
               </div>
@@ -174,10 +180,10 @@ const IndexPage: React.FC = () => {
             <div className="col-md-12 col-lg-5 offset-lg-1 text">
               <h3>Website Project</h3>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
-                eget velit ultricies, feugiat est sed, efr nunc, vivamus vel
-                accumsan dui. Quisque ac dolor cursus, volutpat nisl vel,
-                porttitor eros.
+                <FormattedMessage
+                  defaultMessage="Design websites that can be easily accessed from either PC or mobile is my passion."
+                  description="Home: Web Desing: message"
+                />
               </p>
             </div>
             <div className="col-md-12 col-lg-5">

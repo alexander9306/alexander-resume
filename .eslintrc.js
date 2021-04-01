@@ -39,7 +39,7 @@ module.exports = {
     "formatjs/no-multiple-plurals": "error",
     "formatjs/no-multiple-whitespaces": "error",
     "formatjs/enforce-id": [
-      "error",
+      "off",
       {
         idInterpolationPattern: "[sha512:contenthash:base64:6]",
       },

@@ -21,6 +21,8 @@ module.exports = {
         redirect: false,
         // option for use / as defaultLangauge root path. if your defaultLanguage is `ko`, when `redirectDefaultLanguageToRoot` is true, then it will not generate `/ko/xxx` pages, instead of `/xxx`
         redirectDefaultLanguageToRoot: false,
+        // option for not to flatter the messages json and return it as is instead. Better when using is own parsing
+        flattenMessages: false,
       },
     },
     `gatsby-plugin-react-helmet`,

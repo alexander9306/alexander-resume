@@ -318,24 +318,90 @@ type SitePageContextIntl = {
 };
 
 type SitePageContextIntlMessages = {
-  readonly _1E51p8_0_value: Maybe<Scalars['String']>;
-  readonly _1ZMKhf_0_value: Maybe<Scalars['String']>;
-  readonly _2MDa4g_0_value: Maybe<Scalars['String']>;
-  readonly _60q_eZ_0_value: Maybe<Scalars['String']>;
-  readonly _60q_eZ_1_value: Maybe<Scalars['String']>;
-  readonly _60q_eZ_2_value: Maybe<Scalars['String']>;
-  readonly _60q_eZ_3_value: Maybe<Scalars['String']>;
-  readonly _60q_eZ_4_value: Maybe<Scalars['String']>;
-  readonly DLZ_8c_0_value: Maybe<Scalars['String']>;
-  readonly KtGdeo_0_value: Maybe<Scalars['String']>;
-  readonly LInAss_0_value: Maybe<Scalars['String']>;
-  readonly Qft8Dg_0_value: Maybe<Scalars['String']>;
-  readonly U8XBaR_0_value: Maybe<Scalars['String']>;
-  readonly Wbtjsk_0_value: Maybe<Scalars['String']>;
-  readonly cyQPkf_0_value: Maybe<Scalars['String']>;
-  readonly gM_ef__0_value: Maybe<Scalars['String']>;
-  readonly jHGxHB_0_value: Maybe<Scalars['String']>;
-  readonly v_T4gy_0_value: Maybe<Scalars['String']>;
+  readonly _1E51p8: Maybe<ReadonlyArray<Maybe<SitePageContextIntlMessages_1E51p8>>>;
+  readonly _1ZMKhf: Maybe<ReadonlyArray<Maybe<SitePageContextIntlMessages_1ZMKhf>>>;
+  readonly _2MDa4g: Maybe<ReadonlyArray<Maybe<SitePageContextIntlMessages_2MDa4g>>>;
+  readonly _60q_eZ: Maybe<ReadonlyArray<Maybe<SitePageContextIntlMessages_60q_eZ>>>;
+  readonly DLZ_8c: Maybe<ReadonlyArray<Maybe<SitePageContextIntlMessagesDLZ_8c>>>;
+  readonly KtGdeo: Maybe<ReadonlyArray<Maybe<SitePageContextIntlMessagesKtGdeo>>>;
+  readonly LInAss: Maybe<ReadonlyArray<Maybe<SitePageContextIntlMessagesLInAss>>>;
+  readonly Qft8Dg: Maybe<ReadonlyArray<Maybe<SitePageContextIntlMessagesQft8Dg>>>;
+  readonly U8XBaR: Maybe<ReadonlyArray<Maybe<SitePageContextIntlMessagesU8XBaR>>>;
+  readonly Wbtjsk: Maybe<ReadonlyArray<Maybe<SitePageContextIntlMessagesWbtjsk>>>;
+  readonly cyQPkf: Maybe<ReadonlyArray<Maybe<SitePageContextIntlMessagesCyQPkf>>>;
+  readonly gM_ef_: Maybe<ReadonlyArray<Maybe<SitePageContextIntlMessagesGM_ef_>>>;
+  readonly jHGxHB: Maybe<ReadonlyArray<Maybe<SitePageContextIntlMessagesJHGxHB>>>;
+  readonly v_T4gy: Maybe<ReadonlyArray<Maybe<SitePageContextIntlMessagesV_T4gy>>>;
+};
+
+type SitePageContextIntlMessages_1E51p8 = {
+  readonly type: Maybe<Scalars['Int']>;
+  readonly value: Maybe<Scalars['String']>;
+};
+
+type SitePageContextIntlMessages_1ZMKhf = {
+  readonly type: Maybe<Scalars['Int']>;
+  readonly value: Maybe<Scalars['String']>;
+};
+
+type SitePageContextIntlMessages_2MDa4g = {
+  readonly type: Maybe<Scalars['Int']>;
+  readonly value: Maybe<Scalars['String']>;
+};
+
+type SitePageContextIntlMessages_60q_eZ = {
+  readonly type: Maybe<Scalars['Int']>;
+  readonly value: Maybe<Scalars['String']>;
+};
+
+type SitePageContextIntlMessagesDLZ_8c = {
+  readonly type: Maybe<Scalars['Int']>;
+  readonly value: Maybe<Scalars['String']>;
+};
+
+type SitePageContextIntlMessagesKtGdeo = {
+  readonly type: Maybe<Scalars['Int']>;
+  readonly value: Maybe<Scalars['String']>;
+};
+
+type SitePageContextIntlMessagesLInAss = {
+  readonly type: Maybe<Scalars['Int']>;
+  readonly value: Maybe<Scalars['String']>;
+};
+
+type SitePageContextIntlMessagesQft8Dg = {
+  readonly type: Maybe<Scalars['Int']>;
+  readonly value: Maybe<Scalars['String']>;
+};
+
+type SitePageContextIntlMessagesU8XBaR = {
+  readonly type: Maybe<Scalars['Int']>;
+  readonly value: Maybe<Scalars['String']>;
+};
+
+type SitePageContextIntlMessagesWbtjsk = {
+  readonly type: Maybe<Scalars['Int']>;
+  readonly value: Maybe<Scalars['String']>;
+};
+
+type SitePageContextIntlMessagesCyQPkf = {
+  readonly type: Maybe<Scalars['Int']>;
+  readonly value: Maybe<Scalars['String']>;
+};
+
+type SitePageContextIntlMessagesGM_ef_ = {
+  readonly type: Maybe<Scalars['Int']>;
+  readonly value: Maybe<Scalars['String']>;
+};
+
+type SitePageContextIntlMessagesJHGxHB = {
+  readonly type: Maybe<Scalars['Int']>;
+  readonly value: Maybe<Scalars['String']>;
+};
+
+type SitePageContextIntlMessagesV_T4gy = {
+  readonly type: Maybe<Scalars['Int']>;
+  readonly value: Maybe<Scalars['String']>;
 };
 
 type ImageFormat =
@@ -626,6 +692,7 @@ type SitePluginPluginOptions = {
   readonly defaultLanguage: Maybe<Scalars['String']>;
   readonly redirect: Maybe<Scalars['Boolean']>;
   readonly redirectDefaultLanguageToRoot: Maybe<Scalars['Boolean']>;
+  readonly flattenMessages: Maybe<Scalars['Boolean']>;
   readonly name: Maybe<Scalars['String']>;
   readonly base64Width: Maybe<Scalars['Int']>;
   readonly stripMetadata: Maybe<Scalars['Boolean']>;
@@ -1796,24 +1863,146 @@ type SitePageContextIntlFilterInput = {
 };
 
 type SitePageContextIntlMessagesFilterInput = {
-  readonly _1E51p8_0_value: Maybe<StringQueryOperatorInput>;
-  readonly _1ZMKhf_0_value: Maybe<StringQueryOperatorInput>;
-  readonly _2MDa4g_0_value: Maybe<StringQueryOperatorInput>;
-  readonly _60q_eZ_0_value: Maybe<StringQueryOperatorInput>;
-  readonly _60q_eZ_1_value: Maybe<StringQueryOperatorInput>;
-  readonly _60q_eZ_2_value: Maybe<StringQueryOperatorInput>;
-  readonly _60q_eZ_3_value: Maybe<StringQueryOperatorInput>;
-  readonly _60q_eZ_4_value: Maybe<StringQueryOperatorInput>;
-  readonly DLZ_8c_0_value: Maybe<StringQueryOperatorInput>;
-  readonly KtGdeo_0_value: Maybe<StringQueryOperatorInput>;
-  readonly LInAss_0_value: Maybe<StringQueryOperatorInput>;
-  readonly Qft8Dg_0_value: Maybe<StringQueryOperatorInput>;
-  readonly U8XBaR_0_value: Maybe<StringQueryOperatorInput>;
-  readonly Wbtjsk_0_value: Maybe<StringQueryOperatorInput>;
-  readonly cyQPkf_0_value: Maybe<StringQueryOperatorInput>;
-  readonly gM_ef__0_value: Maybe<StringQueryOperatorInput>;
-  readonly jHGxHB_0_value: Maybe<StringQueryOperatorInput>;
-  readonly v_T4gy_0_value: Maybe<StringQueryOperatorInput>;
+  readonly _1E51p8: Maybe<SitePageContextIntlMessages_1E51p8FilterListInput>;
+  readonly _1ZMKhf: Maybe<SitePageContextIntlMessages_1ZMKhfFilterListInput>;
+  readonly _2MDa4g: Maybe<SitePageContextIntlMessages_2MDa4gFilterListInput>;
+  readonly _60q_eZ: Maybe<SitePageContextIntlMessages_60q_eZFilterListInput>;
+  readonly DLZ_8c: Maybe<SitePageContextIntlMessagesDLZ_8cFilterListInput>;
+  readonly KtGdeo: Maybe<SitePageContextIntlMessagesKtGdeoFilterListInput>;
+  readonly LInAss: Maybe<SitePageContextIntlMessagesLInAssFilterListInput>;
+  readonly Qft8Dg: Maybe<SitePageContextIntlMessagesQft8DgFilterListInput>;
+  readonly U8XBaR: Maybe<SitePageContextIntlMessagesU8XBaRFilterListInput>;
+  readonly Wbtjsk: Maybe<SitePageContextIntlMessagesWbtjskFilterListInput>;
+  readonly cyQPkf: Maybe<SitePageContextIntlMessagesCyQPkfFilterListInput>;
+  readonly gM_ef_: Maybe<SitePageContextIntlMessagesGM_ef_FilterListInput>;
+  readonly jHGxHB: Maybe<SitePageContextIntlMessagesJHGxHBFilterListInput>;
+  readonly v_T4gy: Maybe<SitePageContextIntlMessagesV_T4gyFilterListInput>;
+};
+
+type SitePageContextIntlMessages_1E51p8FilterListInput = {
+  readonly elemMatch: Maybe<SitePageContextIntlMessages_1E51p8FilterInput>;
+};
+
+type SitePageContextIntlMessages_1E51p8FilterInput = {
+  readonly type: Maybe<IntQueryOperatorInput>;
+  readonly value: Maybe<StringQueryOperatorInput>;
+};
+
+type SitePageContextIntlMessages_1ZMKhfFilterListInput = {
+  readonly elemMatch: Maybe<SitePageContextIntlMessages_1ZMKhfFilterInput>;
+};
+
+type SitePageContextIntlMessages_1ZMKhfFilterInput = {
+  readonly type: Maybe<IntQueryOperatorInput>;
+  readonly value: Maybe<StringQueryOperatorInput>;
+};
+
+type SitePageContextIntlMessages_2MDa4gFilterListInput = {
+  readonly elemMatch: Maybe<SitePageContextIntlMessages_2MDa4gFilterInput>;
+};
+
+type SitePageContextIntlMessages_2MDa4gFilterInput = {
+  readonly type: Maybe<IntQueryOperatorInput>;
+  readonly value: Maybe<StringQueryOperatorInput>;
+};
+
+type SitePageContextIntlMessages_60q_eZFilterListInput = {
+  readonly elemMatch: Maybe<SitePageContextIntlMessages_60q_eZFilterInput>;
+};
+
+type SitePageContextIntlMessages_60q_eZFilterInput = {
+  readonly type: Maybe<IntQueryOperatorInput>;
+  readonly value: Maybe<StringQueryOperatorInput>;
+};
+
+type SitePageContextIntlMessagesDLZ_8cFilterListInput = {
+  readonly elemMatch: Maybe<SitePageContextIntlMessagesDLZ_8cFilterInput>;
+};
+
+type SitePageContextIntlMessagesDLZ_8cFilterInput = {
+  readonly type: Maybe<IntQueryOperatorInput>;
+  readonly value: Maybe<StringQueryOperatorInput>;
+};
+
+type SitePageContextIntlMessagesKtGdeoFilterListInput = {
+  readonly elemMatch: Maybe<SitePageContextIntlMessagesKtGdeoFilterInput>;
+};
+
+type SitePageContextIntlMessagesKtGdeoFilterInput = {
+  readonly type: Maybe<IntQueryOperatorInput>;
+  readonly value: Maybe<StringQueryOperatorInput>;
+};
+
+type SitePageContextIntlMessagesLInAssFilterListInput = {
+  readonly elemMatch: Maybe<SitePageContextIntlMessagesLInAssFilterInput>;
+};
+
+type SitePageContextIntlMessagesLInAssFilterInput = {
+  readonly type: Maybe<IntQueryOperatorInput>;
+  readonly value: Maybe<StringQueryOperatorInput>;
+};
+
+type SitePageContextIntlMessagesQft8DgFilterListInput = {
+  readonly elemMatch: Maybe<SitePageContextIntlMessagesQft8DgFilterInput>;
+};
+
+type SitePageContextIntlMessagesQft8DgFilterInput = {
+  readonly type: Maybe<IntQueryOperatorInput>;
+  readonly value: Maybe<StringQueryOperatorInput>;
+};
+
+type SitePageContextIntlMessagesU8XBaRFilterListInput = {
+  readonly elemMatch: Maybe<SitePageContextIntlMessagesU8XBaRFilterInput>;
+};
+
+type SitePageContextIntlMessagesU8XBaRFilterInput = {
+  readonly type: Maybe<IntQueryOperatorInput>;
+  readonly value: Maybe<StringQueryOperatorInput>;
+};
+
+type SitePageContextIntlMessagesWbtjskFilterListInput = {
+  readonly elemMatch: Maybe<SitePageContextIntlMessagesWbtjskFilterInput>;
+};
+
+type SitePageContextIntlMessagesWbtjskFilterInput = {
+  readonly type: Maybe<IntQueryOperatorInput>;
+  readonly value: Maybe<StringQueryOperatorInput>;
+};
+
+type SitePageContextIntlMessagesCyQPkfFilterListInput = {
+  readonly elemMatch: Maybe<SitePageContextIntlMessagesCyQPkfFilterInput>;
+};
+
+type SitePageContextIntlMessagesCyQPkfFilterInput = {
+  readonly type: Maybe<IntQueryOperatorInput>;
+  readonly value: Maybe<StringQueryOperatorInput>;
+};
+
+type SitePageContextIntlMessagesGM_ef_FilterListInput = {
+  readonly elemMatch: Maybe<SitePageContextIntlMessagesGM_ef_FilterInput>;
+};
+
+type SitePageContextIntlMessagesGM_ef_FilterInput = {
+  readonly type: Maybe<IntQueryOperatorInput>;
+  readonly value: Maybe<StringQueryOperatorInput>;
+};
+
+type SitePageContextIntlMessagesJHGxHBFilterListInput = {
+  readonly elemMatch: Maybe<SitePageContextIntlMessagesJHGxHBFilterInput>;
+};
+
+type SitePageContextIntlMessagesJHGxHBFilterInput = {
+  readonly type: Maybe<IntQueryOperatorInput>;
+  readonly value: Maybe<StringQueryOperatorInput>;
+};
+
+type SitePageContextIntlMessagesV_T4gyFilterListInput = {
+  readonly elemMatch: Maybe<SitePageContextIntlMessagesV_T4gyFilterInput>;
+};
+
+type SitePageContextIntlMessagesV_T4gyFilterInput = {
+  readonly type: Maybe<IntQueryOperatorInput>;
+  readonly value: Maybe<StringQueryOperatorInput>;
 };
 
 type SitePluginFilterInput = {
@@ -1838,6 +2027,7 @@ type SitePluginPluginOptionsFilterInput = {
   readonly defaultLanguage: Maybe<StringQueryOperatorInput>;
   readonly redirect: Maybe<BooleanQueryOperatorInput>;
   readonly redirectDefaultLanguageToRoot: Maybe<BooleanQueryOperatorInput>;
+  readonly flattenMessages: Maybe<BooleanQueryOperatorInput>;
   readonly name: Maybe<StringQueryOperatorInput>;
   readonly base64Width: Maybe<IntQueryOperatorInput>;
   readonly stripMetadata: Maybe<BooleanQueryOperatorInput>;
@@ -2033,24 +2223,20 @@ type SitePageFieldsEnum =
   | 'context.language'
   | 'context.intl.language'
   | 'context.intl.languages'
-  | 'context.intl.messages._1E51p8_0_value'
-  | 'context.intl.messages._1ZMKhf_0_value'
-  | 'context.intl.messages._2MDa4g_0_value'
-  | 'context.intl.messages._60q_eZ_0_value'
-  | 'context.intl.messages._60q_eZ_1_value'
-  | 'context.intl.messages._60q_eZ_2_value'
-  | 'context.intl.messages._60q_eZ_3_value'
-  | 'context.intl.messages._60q_eZ_4_value'
-  | 'context.intl.messages.DLZ_8c_0_value'
-  | 'context.intl.messages.KtGdeo_0_value'
-  | 'context.intl.messages.LInAss_0_value'
-  | 'context.intl.messages.Qft8Dg_0_value'
-  | 'context.intl.messages.U8XBaR_0_value'
-  | 'context.intl.messages.Wbtjsk_0_value'
-  | 'context.intl.messages.cyQPkf_0_value'
-  | 'context.intl.messages.gM_ef__0_value'
-  | 'context.intl.messages.jHGxHB_0_value'
-  | 'context.intl.messages.v_T4gy_0_value'
+  | 'context.intl.messages._1E51p8'
+  | 'context.intl.messages._1ZMKhf'
+  | 'context.intl.messages._2MDa4g'
+  | 'context.intl.messages._60q_eZ'
+  | 'context.intl.messages.DLZ_8c'
+  | 'context.intl.messages.KtGdeo'
+  | 'context.intl.messages.LInAss'
+  | 'context.intl.messages.Qft8Dg'
+  | 'context.intl.messages.U8XBaR'
+  | 'context.intl.messages.Wbtjsk'
+  | 'context.intl.messages.cyQPkf'
+  | 'context.intl.messages.gM_ef_'
+  | 'context.intl.messages.jHGxHB'
+  | 'context.intl.messages.v_T4gy'
   | 'context.intl.routed'
   | 'context.intl.originalPath'
   | 'context.intl.redirect'
@@ -2102,6 +2288,7 @@ type SitePageFieldsEnum =
   | 'pluginCreator.pluginOptions.defaultLanguage'
   | 'pluginCreator.pluginOptions.redirect'
   | 'pluginCreator.pluginOptions.redirectDefaultLanguageToRoot'
+  | 'pluginCreator.pluginOptions.flattenMessages'
   | 'pluginCreator.pluginOptions.name'
   | 'pluginCreator.pluginOptions.base64Width'
   | 'pluginCreator.pluginOptions.stripMetadata'
@@ -2599,6 +2786,7 @@ type SitePluginFieldsEnum =
   | 'pluginOptions.defaultLanguage'
   | 'pluginOptions.redirect'
   | 'pluginOptions.redirectDefaultLanguageToRoot'
+  | 'pluginOptions.flattenMessages'
   | 'pluginOptions.name'
   | 'pluginOptions.base64Width'
   | 'pluginOptions.stripMetadata'
@@ -2687,14 +2875,14 @@ type GatsbyImageSharpFluid_noBase64Fragment = Pick<ImageSharpFluid, 'aspectRatio
 
 type GatsbyImageSharpFluid_withWebp_noBase64Fragment = Pick<ImageSharpFluid, 'aspectRatio' | 'src' | 'srcSet' | 'srcWebp' | 'srcSetWebp' | 'sizes'>;
 
-type PagesQueryQueryVariables = Exact<{ [key: string]: never; }>;
-
-
-type PagesQueryQuery = { readonly allSitePage: { readonly nodes: ReadonlyArray<Pick<SitePage, 'path'>> } };
-
 type MetaDataQueryVariables = Exact<{ [key: string]: never; }>;
 
 
 type MetaDataQuery = { readonly site: Maybe<{ readonly siteMetadata: Maybe<Pick<SiteSiteMetadata, 'title' | 'description' | 'author'>> }> };
+
+type PagesQueryQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+type PagesQueryQuery = { readonly allSitePage: { readonly nodes: ReadonlyArray<Pick<SitePage, 'path'>> } };
 
 }
