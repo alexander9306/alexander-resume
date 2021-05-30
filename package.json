@@ -57,17 +57,17 @@
   "scripts": {
     "message:base": "formatjs",
     "message:extract": "npm run message:base -- extract 'src/**/*.ts*' --out-file src/i18n/en.json --id-interpolation-pattern '[sha512:contenthash:base64:6]' && npm run message:extract:es",
-    "message:extract:es": "npm run message:base -- extract 'src/**/*.ts*' --out-file src/i18n/es.json --id-interpolation-pattern '[sha512:contenthash:base64:6]' --format message-formatter.js",
+    "message:extract:es": "npm run message:base -- extract 'src/**/*.ts*' --out-file src/i18n/es.json --id-interpolation-pattern '[sha512:contenthash:base64:6]' --format es-message-formatter.js",
     "message:compile": "npm run message:base -- compile src/i18n/en.json --ast --out-file src/__generated__/i18n/en.json && npm run message:compile:es",
     "message:compile:es": "npm run message:base -- compile src/i18n/es.json --ast --out-file src/__generated__/i18n/es.json",
     "develop": "gatsby develop",
     "build": "gatsby build",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
+    "format:write": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
+    "format:check": "prettier --check \"**/*.{js,jsx,ts,tsx,json,md}\"",
     "start": "npm run develop",
     "lint:fix": "eslint --fix",
-    "lint:style": "prettier --check \"**/*.{js,jsx,ts,tsx,json,md}\"",
     "lint:types": "tsc --noEmit"
   },
   "repository": {

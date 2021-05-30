@@ -11,21 +11,21 @@
     "defaultMessage": "Home",
     "description": "SEO: Home title"
   },
-  "60q+eZ": {
-    "defaultMessage": "Hello! I am {my_name}. I work as interface and front end developer. I have passion for pixel perfect, minimal and easy to use interfaces.",
-    "description": "Home Message about myself"
+  "6QgI7W": {
+    "defaultMessage": "Design websites that can be easily accessed from either PC or mobile is my passion.",
+    "description": "Home: Web Desing: message"
   },
   "DLZ+8c": {
     "defaultMessage": "Contact me",
     "description": "Contact me link on footer."
   },
-  "KtGdeo": {
-    "defaultMessage": "Me",
-    "description": "Avatar alt information"
-  },
   "LInAss": {
     "defaultMessage": "You just hit a route that doesn't exist... :(",
     "description": "Not found information message"
+  },
+  "NIg/pJ": {
+    "defaultMessage": "Website screenshot",
+    "description": "Home: Laptop info"
   },
   "Qft8Dg": {
     "defaultMessage": "Sent from your website.",
@@ -43,13 +43,29 @@
     "defaultMessage": "About me",
     "description": "About me link on footer."
   },
+  "f968hb": {
+    "defaultMessage": "Hello! I am {my_name}. I work as a Full-stack Developer. I create performance-oriented applications with a responsive design.",
+    "description": "Home: Message about myself"
+  },
   "gM/ef/": {
     "defaultMessage": "Projects",
     "description": "Projects link on header."
   },
+  "gSldJX": {
+    "defaultMessage": "Hire me",
+    "description": "Home: Hire me button"
+  },
   "jHGxHB": {
     "defaultMessage": "Hire me",
     "description": "Hire me link on header."
+  },
+  "ln7Nkd": {
+    "defaultMessage": "Me",
+    "description": "Home: Avatar alt information"
+  },
+  "sFTpxH": {
+    "defaultMessage": "Design websites that can be easily accessed from either PC or mobile is my passion. Let's face it",
+    "description": "Home: Web Desing: message"
   },
   "v/T4gy": {
     "defaultMessage": "Job offer",

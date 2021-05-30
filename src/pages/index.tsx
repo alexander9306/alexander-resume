@@ -6,7 +6,6 @@ import {
   IoSettingsOutline,
 } from "react-icons/io5"
 import { StaticImage } from "gatsby-plugin-image"
-import latopPicture from "../images/tech/image6.png"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -41,7 +40,7 @@ const IndexPage: React.FC = () => {
             src="../images/avatars/PXL_20210324_011943234_2.jpg"
             alt={intl.formatMessage({
               defaultMessage: "Me",
-              description: "Avatar alt information",
+              description: "Home: Avatar alt information",
             })}
             placeholder="blurred"
             width={150}
@@ -51,8 +50,8 @@ const IndexPage: React.FC = () => {
           <div className="about-me">
             <p>
               <FormattedMessage
-                defaultMessage="Hello! I am {my_name}. I work as a front and back end developer. I create performance-oriented applications with a responsive design."
-                description="Home Message about myself"
+                defaultMessage="Hello! I am {my_name}. I work as a Full-stack Developer. I create performance-oriented applications with a responsive design."
+                description="Home: Message about myself"
                 values={{
                   my_name: <strong>Alexander Damaso</strong>,
                 }}
@@ -68,6 +67,7 @@ const IndexPage: React.FC = () => {
           </div>
         </div>
       </section>
+      {/*       
       <section className="portfolio-block photography">
         <div className="container">
           <div className="row g-0">
@@ -103,7 +103,8 @@ const IndexPage: React.FC = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
+
       <section className="portfolio-block call-to-action border-bottom">
         <div className="container">
           <div className="d-flex justify-content-center align-items-center content">
@@ -114,6 +115,7 @@ const IndexPage: React.FC = () => {
           </div>
         </div>
       </section>
+
       <section className="portfolio-block skills">
         <div className="container">
           <div className="heading">
@@ -174,6 +176,7 @@ const IndexPage: React.FC = () => {
           </div>
         </div>
       </section>
+
       <section className="portfolio-block website gradient pb-3">
         <div className="container">
           <div className="row align-items-center">
@@ -189,11 +192,20 @@ const IndexPage: React.FC = () => {
             <div className="col-md-12 col-lg-5">
               <div className="portfolio-laptop-mockup">
                 <div className="screen">
-                  <div
-                    className="screen-content"
+                  <StaticImage
                     style={{
-                      backgroundImage: `url(${latopPicture})`,
+                      backgroundSize: "cover",
+                      backgroundPosition: "center",
+                      height: "100%",
+                      margin: "auto",
+                      border: "1px solid #c5c5c5",
                     }}
+                    src="../images/webpage1.png"
+                    alt={intl.formatMessage({
+                      defaultMessage: "Website screenshot",
+                      description: "Home: Laptop info",
+                    })}
+                    placeholder="blurred"
                   />
                 </div>
                 <div className="keyboard" />

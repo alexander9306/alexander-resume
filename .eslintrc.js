@@ -12,7 +12,7 @@ module.exports = {
     ".cache",
     "public",
     "gatsby-*.js",
-    "message-formatter.js",
+    "es-message-formatter.js",
     ".eslintrc.js",
     "*.config.js",
   ],
