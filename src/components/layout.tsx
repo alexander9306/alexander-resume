@@ -6,7 +6,6 @@ import Header from "./header"
 // Styles
 import "./style.scss"
 import "./layout.scss"
-// import "bootstrap/dist/css/bootstrap.min.css"
 import "@fontsource/lato/300.css"
 import "@fontsource/lato/400.css"
 import "@fontsource/lato/700.css"

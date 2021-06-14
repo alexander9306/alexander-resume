@@ -7,7 +7,6 @@
   "dependencies": {
     "@fontsource/lato": "^4.2.2",
     "@formatjs/icu-messageformat-parser": "^1.1.2",
-    "bootstrap": "^5.0.0-beta2",
     "gatsby": "^3.0.1",
     "gatsby-plugin-gatsby-cloud": "^2.0.0",
     "gatsby-plugin-image": "^1.0.0",

@@ -10,7 +10,6 @@
 
   // Set *default* container specific settings.json values on container create.
   "settings": {
-    "terminal.integrated.shell.linux": "/bin/bash",
     "typescript.suggest.paths": false
     // "eslint.options": {
     //   "configFile": "./node_modules/gatsby/dist/utils/eslint-config.js"
